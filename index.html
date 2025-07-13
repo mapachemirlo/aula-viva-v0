@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explorá tu Galaxia Interior</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <main id="app">
+    <!-- Pantalla Intro -->
+    <section id="pantalla-intro">
+      <h1>Explorá tu Galaxia Interior</h1>
+      <p>¡Bienvenido, viajero estelar! Hoy vamos a explorar tu universo personal usando formas, colores y frases.</p>
+      <button id="btn-empezar">Comenzar</button>
+    </section>
+
+    <!-- Pantalla Índice -->
+    <section id="pantalla-indice" class="oculto">
+      <h2>¿Qué haremos?</h2>
+      <ol>
+        <li>Desafío 1: Atrapar cometas</li>
+        <li>Desafío 2: Asociar frases</li>
+        <li>Desafío 3: Bitácora de viaje</li>
+      </ol>
+      <button id="btn-siguiente-indice">Ir al Desafío 1</button>
+    </section>
+
+    <!-- Desafío 1 -->
+    <section id="pantalla-desafio1" class="oculto">
+      <h2>Desafío 1: Atrapa los cometas</h2>
+      <div id="consigna-container">
+        <p id="consigna">Atrapa los rojos</p>
+      </div>
+      <div id="juego-cometas"></div>
+
+      <div id="recipientes">
+        <div class="recipiente rojo">Rojo (<span class="contador">0</span>)</div>
+        <div class="recipiente azul">Azul (<span class="contador">0</span>)</div>
+        <div class="recipiente verde">Verde (<span class="contador">0</span>)</div>
+      </div>
+
+      <button id="btn-finalizar-d1" class="oculto">Ir al Desafío 2</button>
+    </section>
+
+    <!-- Desafío 2 (placeholder) -->
+    <section id="pantalla-desafio2" class="oculto">
+    <h2>Desafío 2: Asociar frases a imágenes</h2>
+
+    <div id="zona-asociacion">
+        <div class="imagenes">
+        <div class="imagen-box" data-img="planeta_solo.jpg"><img src="assets/img/planeta_solo.jpg" alt="planeta_solo"></div>
+        <div class="imagen-box" data-img="nebulosa.jpg"><img src="assets/img/nebulosa.jpg" alt="nebulosa"></div>
+        <div class="imagen-box" data-img="tormenta_cosmica.jpg"><img src="assets/img/tormenta_cosmica.jpg" alt="tormenta_cosmica"></div>
+        </div>
+
+        <div class="frases">
+        <div class="frase" draggable="true" data-frase="frase1">"Tantos colores mezclados, no sé por dónde empezar a explorar, y entonces me pierdo un poco, y se me olvida lo que buscaba.."</div>
+        <div class="frase" draggable="true" data-frase="frase2">"Me siento identificado con este planeta, a veces me da miedo estar solo y que nadie me encuentre, es un pensamiento recurrente."</div>
+        <div class="frase" draggable="true" data-frase="frase3">"Qué locura, todo gira y se mueve muy rápido, y entonces no sé qué pasa, pero no me puedo concentrar en nada.."</div>
+        </div>
+    </div>
+
+    <button id="btn-finalizar-d2" class="oculto">Ir al Desafío 3</button>
+    </section>
+
+    <!-- Desafío 3 -->
+    <section id="pantalla-desafio3" class="oculto">
+      <h2>Desafío 3: Bitácora de Viaje</h2>
+      <p>Comparte tu experiencia como explorador estelar. ¿Qué te pareció esta misión?</p>
+      
+      <div id="bitacora-container">
+        <label for="bitacora-texto">Escribe tu bitácora de viaje:</label>
+        <textarea id="bitacora-texto" placeholder="Describe tu experiencia explorando tu galaxia interior... ¿Qué descubriste? ¿Cómo te sentiste? ¿Qué fue lo más interesante?"></textarea>
+        
+        <div id="contador-caracteres">
+          <span id="caracteres-actuales">0</span> / 500 caracteres
+        </div>
+      </div>
+
+      <button id="btn-finalizar-d3" class="oculto">Finalizar Misión</button>
+    </section>
+
+    <!-- Pantalla Final -->
+    <section id="pantalla-final" class="oculto">
+      <h2>¡Felicitaciones, explorador!</h2>
+      <p>Completaste todos los desafíos de tu galaxia interior.</p>
+      <p>Tu viaje estelar ha sido registrado en los archivos de la misión.</p>
+      
+      <div id="clave-secreta-container">
+        <label for="clave-secreta">Ingresa la clave secreta para ver los resultados:</label>
+        <input type="password" id="clave-secreta" placeholder="Clave secreta">
+        <button id="btn-mostrar-resultados">Ver Resultados</button>
+      </div>
+      
+      <div id="resultados-container" class="oculto">
+        <h3>Resultados de tu Misión Estelar</h3>
+        <pre id="resultados-json"></pre>
+      </div>
+    </section>
+
+
+    <!-- Pantalla Final -->
+    <!-- <section id="pantalla-final" class="oculto">
+      <h2>¡Felicitaciones, explorador!</h2>
+      <p>Completaste todos los desafíos.</p>
+    </section> -->
+  </main>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
